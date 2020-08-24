@@ -1,0 +1,84 @@
+@charset "UTF-8";
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+}
+
+body {
+  font-family: "Roboto Mono", monospace;
+  background: url("images/img2.jpg") no-repeat right center;
+  background-size: 70vw;
+}
+
+.wrap {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 5vh;
+}
+.wrap .columns {
+  column-count: 1;
+  column-gap: 5rem;
+  column-rule-style: solid;
+  column-rule-width: 0.5rem;
+  column-rule-color: #660000;
+  background-color: #ff6a20;
+  padding: 5rem;
+  width: 80vw;
+  orphans: 2;
+  widows: 2;
+}
+@media (min-width: 600px) {
+  .wrap .columns {
+    column-count: 2;
+  }
+}
+@media (min-width: 900px) {
+  .wrap .columns {
+    column-count: 3;
+  }
+}
+@media (min-width: 1800px) {
+  .wrap .columns {
+    column-count: 4;
+  }
+}
+.wrap .columns .head {
+  column-span: all;
+  padding-bottom: 5rem;
+}
+.wrap .columns .cile {
+  margin-top: 0;
+}
+
+h1, h2, .h2 {
+  font-family: "Work Sans", sans-serif;
+}
+
+ol li {
+  list-style: none;
+  padding-bottom: 1.25rem;
+}
+
+ul {
+  position: relative;
+}
+ul li {
+  list-style-type: none;
+}
+ul li:before {
+  content: "–";
+  position: absolute;
+  margin-left: -1.1em;
+}
+
+.noindent li:before {
+  content: "";
+  position: absolute;
+  margin-left: -1.1em;
+}
+
+/*# sourceMappingURL=style.css.map */

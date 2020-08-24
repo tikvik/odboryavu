@@ -1,0 +1,75 @@
+@import "mixins.scss"
+
+
+$gap: 5rem
+*
+	box-sizing: border-box
+
+html, body
+	height: 100%
+	// color: white	
+// body
+// 	margin: 0
+body
+	font-family: 'Roboto Mono', monospace
+	background: url('images/img2.jpg') no-repeat right center
+	background-size: 70vw	
+	// background-color: rgba(#FF6A20,.6)
+.wrap
+	display: flex
+	align-items: center
+	justify-content: center
+	padding-top: 5vh
+	// height: 100vh
+	// background-color: rgba(#FF6A20,.6)
+
+	.columns
+		column-count: 1
+		column-gap: $gap
+		column-rule-style: solid
+		column-rule-width: $gap/10
+		column-rule-color: darken(red, 30)
+		// margin-bottom: $gap*4
+		background-color: rgba(#FF6A20,1)
+		padding: $gap
+		width: 80vw
+		orphans: 2
+		widows: 2
+		@include for-size(sm)
+			column-count: 2
+		@include for-size(md)
+			column-count: 3
+		@include for-size(xl)
+			column-count: 4
+		// column-rule
+		// column-span
+		// column-width
+		.head
+			column-span: all
+			padding-bottom: $gap
+
+		.cile
+			margin-top: 0
+
+h1, h2, .h2
+	font-family: 'Work Sans', sans-serif
+
+
+ol
+	li
+		list-style: none
+		padding-bottom: $gap/4
+ul
+	position: relative
+	li
+		list-style-type: none
+		&:before
+			content: "–"
+			position: absolute
+			margin-left: -1.1em
+.noindent
+	li
+		&:before
+			content: ""
+			position: absolute
+			margin-left: -1.1em
