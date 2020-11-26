@@ -9,11 +9,11 @@
   margin-left: auto;
 }
 
-
 .m-wider {
   width: 89%;
   column-count: 2;
 }
+
 
 .flexa {
   display: flex;
