@@ -121,11 +121,6 @@ body {
     column-count: 3;
   }
 }
-@media (min-width: 1800px) {
-  .wrap .columns {
-    column-count: 4;
-  }
-}
 .wrap .columns .head {
   column-span: all;
   padding-bottom: 1.5rem;
