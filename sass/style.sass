@@ -1,4 +1,10 @@
+
 @import "mixins.scss"
+
+
+
+a
+	color: black
 
 
 #btnControl 
@@ -9,7 +15,9 @@
 	transform: rotateY(180deg)
 
 
-
+.keeptogether
+	display: inline-block
+	width: 100%
 
 	// .flip-card-inner
 	// 	transform: rotateY(180deg)
@@ -70,7 +78,7 @@
 
 
 
-$gap: 5vw
+$gap: 3rem
 
 label
 	cursor: alias
@@ -97,26 +105,35 @@ body
 	font-family: 'Roboto Mono', monospace
 	background: url('images/img2.jpg') no-repeat right center
 	background-size: 70vw
-	font-size: 1.7vh
-	font-weight: 600
+	font-size: $gap/3
+	font-weight: normal
 	// background-color: rgba(#FF6A20,.6)
+
+
+
+
 .wrap
 	display: flex
 	align-items: center
 	justify-content: center
 	padding-top: 5vh
+	max-width: 1200px
+	margin-left: auto
+	margin-right: auto
 	// height: 100vh
 	// background-color: rgba(#FF6A20,.6)
 
 	.columns
 		column-count: 1
 		column-gap: $gap
-		column-rule-style: solid
-		column-rule-width: $gap/10
+		// column-rule-style: solid
+		// column-rule-width: $gap/10
 		column-rule-color: darken(red, 30)
 		// margin-bottom: $gap*4
 		background-color: rgba(#FF6A20,1)
-		padding: $gap
+		padding: $gap/2
+		@include for-size(sm)
+			padding: $gap
 		width: 90vw
 		min-height: 80vh
 		orphans: 2
@@ -134,19 +151,20 @@ body
 			column-span: all
 			padding-bottom: $gap/2
 
-		.cile
-			margin-top: 0
 
 h1, h2, .h2
 	font-family: 'Work Sans', sans-serif
 
 
 ol
+	padding-left: 0
 	li
 		list-style: none
-		padding-bottom: $gap/4
+		// padding-bottom: $gap/4
 ul
 	position: relative
+	padding-left: 1rem
+
 	li
 		list-style-type: none
 		&:before

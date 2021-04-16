@@ -1,10 +1,19 @@
 @charset "UTF-8";
+a {
+  color: black;
+}
+
 #btnControl {
   display: none;
 }
 
 #btnControl:checked + .flip-card .flip-card-inner {
   transform: rotateY(180deg);
+}
+
+.keeptogether {
+  display: inline-block;
+  width: 100%;
 }
 
 .messages {
@@ -59,9 +68,9 @@
 label {
   cursor: alias;
   display: block;
-  padding-right: 0.5vw;
-  padding-bottom: 0.5vw;
-  width: 2.5vw;
+  padding-right: 0.3rem;
+  padding-bottom: 0.3rem;
+  width: 1.5rem;
   line-height: 0;
 }
 
@@ -73,8 +82,8 @@ body {
   font-family: "Roboto Mono", monospace;
   background: url("images/img2.jpg") no-repeat right center;
   background-size: 70vw;
-  font-size: 1.7vh;
-  font-weight: 600;
+  font-size: 1rem;
+  font-weight: normal;
 }
 
 .wrap {
@@ -82,19 +91,25 @@ body {
   align-items: center;
   justify-content: center;
   padding-top: 5vh;
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
 }
 .wrap .columns {
   column-count: 1;
-  column-gap: 5vw;
-  column-rule-style: solid;
-  column-rule-width: 0.5vw;
+  column-gap: 3rem;
   column-rule-color: #660000;
   background-color: #ff6a20;
-  padding: 5vw;
+  padding: 1.5rem;
   width: 90vw;
   min-height: 80vh;
   orphans: 2;
   widows: 2;
+}
+@media (min-width: 600px) {
+  .wrap .columns {
+    padding: 3rem;
+  }
 }
 @media (min-width: 600px) {
   .wrap .columns {
@@ -113,23 +128,23 @@ body {
 }
 .wrap .columns .head {
   column-span: all;
-  padding-bottom: 2.5vw;
-}
-.wrap .columns .cile {
-  margin-top: 0;
+  padding-bottom: 1.5rem;
 }
 
 h1, h2, .h2 {
   font-family: "Work Sans", sans-serif;
 }
 
+ol {
+  padding-left: 0;
+}
 ol li {
   list-style: none;
-  padding-bottom: 1.25vw;
 }
 
 ul {
   position: relative;
+  padding-left: 1rem;
 }
 ul li {
   list-style-type: none;
